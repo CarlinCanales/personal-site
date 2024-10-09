@@ -3,21 +3,21 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Carlin Canales - Web Developer Extraordinaire">
+    <header>
+        <h1>Hi. I'm Carlin Canales.</h1>
+        <nav>
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#job-experience">Job Experience</a></li>
+                <li><a href="#strengths">Strengths</a></li>
+                <li><a href="#experience-with">Experience With</a></li>
+                <li><a href="#soft-skills">Soft Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <header>
-            <h1>Hi. I'm Carlin Canales.</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about-me">About Me</a></li>
-                    <li><a href="#job-experience">Job Experience</a></li>
-                    <li><a href="#strengths">Strengths</a></li>
-                    <li><a href="#experience-with">Experience With</a></li>
-                    <li><a href="#soft-skills">Soft Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
         <section id="about-me">
             <div class="section-wrapper">
                 <div>
@@ -145,12 +145,48 @@ import Layout from '../layouts/Layout.astro';
                 </div>
             </div>
         </section>
-        <footer>
-            <p>Inspired by <a href="https://motherfuckingwebsite.com/" target="_blank">MFing Website</a></p>
-        </footer>
     </main>
+    <footer>
+        <p>Inspired by <a href="https://motherfuckingwebsite.com/" target="_blank">MFing Website</a></p>
+    </footer>
 </Layout>
 <style lang="scss">
+
+  main {
+    padding: .5rem;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: #f9f9f9;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 0 1rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    ul {
+      display: contents;
+    }
+
+    li {
+      display: flex;
+      align-content: center;
+      margin-right: 1rem;
+    }
+
+    ul, li {
+      list-style: none;
+    }
+  }
 
   h3 {
     font-size: 1.875rem;
@@ -190,38 +226,11 @@ import Layout from '../layouts/Layout.astro';
   @media only screen and (min-width: 640px) {
 
     header {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      background: #f9f9f9;
-      border-bottom: 1px solid #e3e3e3;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-
-      ul {
-        display: contents;
-      }
-
-      li {
-        display: flex;
-        align-content: center;
-      }
-
-      ul, li {
-        list-style: none;
-      }
+      position: fixed;
     }
 
     main {
-      padding-top: 4rem;
+      margin-top: 4rem;
     }
 
     .section-wrapper {
