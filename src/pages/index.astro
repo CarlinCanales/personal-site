@@ -18,7 +18,8 @@ import Layout from '../layouts/Layout.astro';
         </nav>
     </header>
     <main>
-        <section id="about-me">
+        <section>
+            <a name="about-me"/>
             <div class="section-wrapper">
                 <div>
                     <h3>About Me.</h3>
@@ -30,7 +31,8 @@ import Layout from '../layouts/Layout.astro';
                 </div>
             </div>
         </section>
-        <section id="job-experience">
+        <section>
+            <a name="job-experience"/>
             <div class="section-wrapper">
                 <div>
                     <h3>Experience.</h3>
@@ -88,7 +90,8 @@ import Layout from '../layouts/Layout.astro';
                 </div>
             </div>
         </section>
-        <section id="strengths">
+        <section>
+            <a name="strengths"/>
             <div class="section-wrapper">
                 <h3>Strengths.</h3>
                 <ul>
@@ -101,7 +104,8 @@ import Layout from '../layouts/Layout.astro';
                 </ul>
             </div>
         </section>
-        <section id="experience-with">
+        <section>
+            <a name="experience-with"/>
             <div class="section-wrapper">
                 <h3>Experience With.</h3>
                 <ul>
@@ -112,7 +116,8 @@ import Layout from '../layouts/Layout.astro';
                 </ul>
             </div>
         </section>
-        <section id="soft-skills">
+        <section>
+            <a name="soft-skills"/>
             <div class="section-wrapper">
                 <h3>Soft Skills.</h3>
                 <ul>
@@ -125,7 +130,8 @@ import Layout from '../layouts/Layout.astro';
                 </ul>
             </div>
         </section>
-        <section id="education">
+        <section>
+            <a name="education"/>
             <div class="section-wrapper">
                 <h3>Education.</h3>
                 <div>
@@ -135,7 +141,8 @@ import Layout from '../layouts/Layout.astro';
                 </div>
             </div>
         </section>
-        <section id="contact">
+        <section>
+            <a name="contact"/>
             <div class="section-wrapper">
                 <h3>Contact.</h3>
                 <div>
@@ -224,6 +231,13 @@ import Layout from '../layouts/Layout.astro';
   }
 
   @media only screen and (min-width: 640px) {
+
+    a[name] {
+      display: block;
+      position: relative;
+      top: -4rem;
+      visibility: hidden;
+    }
 
     header {
       position: fixed;
