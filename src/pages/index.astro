@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PortfolioNavigator from '../components/PortfolioNavigator/PortfolioNavigator.vue';
 ---
 
 <Layout title="Carlin Canales - Web Developer Extraordinaire">
@@ -152,12 +153,18 @@ import Layout from '../layouts/Layout.astro';
                 </div>
             </div>
         </section>
+        <PortfolioNavigator client:load/>
     </main>
     <footer>
         <p>Inspired by <a href="https://motherfuckingwebsite.com/" target="_blank">MFing Website</a></p>
     </footer>
 </Layout>
 <style lang="scss">
+
+  :root {
+    --yankee-navy: #0C2340;
+    --yankee-gray: #C4CED3;
+  }
 
   main {
     padding: .5rem;
